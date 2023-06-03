@@ -13,7 +13,7 @@ AWS_VIDEO_DISABLE=$(awk -F "=" '/AWS_VIDEO_DISABLE *=/ {print $2}' $HACK_INI)
 [ "$AWS_VIDEO_DISABLE" = "on" ] && export ATOMTECH_AWS_ACCESS=disable_video
 
 insmod /system/driver/tx-isp-t31.ko isp_clk=100000000
-if [ "ATOM_CAKP1JZJP" = "$PRODUCT_MODEL" ] ; then
+if [ "TELEAR_CamPan" = "$PRODUCT_MODEL" ] ; then
   insmod /system/driver/audio.ko spk_gpio=-1 alc_mode=0 mic_gain=0
 else
   insmod /system/driver/audio.ko spk_gpio=-1
@@ -24,6 +24,7 @@ insmod /system/driver/sample_pwm_core.ko
 insmod /system/driver/sample_pwm_hal.ko
 insmod /system/driver/speaker_ctl.ko
 [ "ATOM_CAKP1JZJP" = "$PRODUCT_MODEL" ] && insmod /system/driver/sample_motor.ko vstep_offset=0 hmaxstep=2130 vmaxstep=1580
+[ "TELEAR_CamPan" = "$PRODUCT_MODEL" ] && insmod /system/driver/sample_motor.ko vstep_offset=0 hmaxstep=2130 vmaxstep=1600
 
 rm -rf /media/mmc/.Trashes
 

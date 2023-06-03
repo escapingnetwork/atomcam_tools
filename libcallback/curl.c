@@ -54,7 +54,7 @@ static int curl_minimum_alarm_cycle = 0;
 static int debug = 0;
 
 static void __attribute ((constructor)) curl_hook_init(void) {
-  original_curl_easy_perform = dlsym(dlopen("/thirdlib/libcurl.so", RTLD_LAZY), "curl_easy_perform");
+  original_curl_easy_perform = dlsym(dlopen("/system/lib/libcurl.so.4.5.0", RTLD_LAZY), "curl_easy_perform");
   char *p = getenv("MINIMIZE_ALARM_CYCLE");
   if(p && !strcmp(p, "on")) {
     curl_minimum_alarm_cycle = 300;
