@@ -14,7 +14,7 @@ CRUISE_LIST=$(awk -F "=" '/CRUISE_LIST *=/ {gsub(/^ */, "", $2);gsub(/ *; */, ";
 
 PRODUCT_CONFIG=/atom/configs/.product_config
 PRODUCT_MODEL=$(awk -F "=" '/PRODUCT_MODEL *=/ {print $2}' $PRODUCT_CONFIG)
-[ "ATOM_CAKP1JZJP" != "$PRODUCT_MODEL" ] && exit 0
+[ "TELEAR_CamPan" != "$PRODUCT_MODEL" ] && exit 0
 
 while : ; do
   IFS=";"
