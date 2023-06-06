@@ -318,7 +318,7 @@
         return false;
       },
       isSwing() {
-        return !this.rebooting && (this.config.PRODUCT_MODEL === 'ATOM_CAKP1JZJP');
+        return !this.rebooting && (this.config.PRODUCT_MODEL === 'TELEAR_CamPan');
       },
       RtspUrl0() {
         const port = (this.config.RTSP_OVER_HTTP  === 'on') ? 8080 : 8554;
