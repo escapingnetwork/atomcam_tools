@@ -14,3 +14,7 @@ Clone of:
 This repo intends to gather workarounds to extend the product features which are disabled by the vendor.
 
 Highest priority would be to enable RTSP or RTC-to-RTSP.
+
+### Thanks
+
+This repo couldn't be possible without the work and contribution of @mnakada @gtxaspec @federoitman 
