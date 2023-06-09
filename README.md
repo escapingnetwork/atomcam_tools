@@ -17,4 +17,4 @@ Highest priority would be to enable RTSP or RTC-to-RTSP.
 
 ### Thanks
 
-This repo couldn't be possible without the work and contribution of @mnakada @gtxaspec @federoitman 
+This repo couldn't be possible without the work and contribution of [@mnakada](https://github.com/mnakada) [@gtxaspec](https://github.com/gtxaspec) [@federoitman](https://github.com/federoitman)
