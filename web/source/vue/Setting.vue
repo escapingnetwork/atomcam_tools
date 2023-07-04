@@ -19,6 +19,7 @@
           <select v-model="$i18n.locale">
             <option value="ja">日本語</option>
             <option value="en">English</option>
+            <option value="es">Español</option>
           </select>
         </div>
         <a href="https://github.com/mnakada/atomcam_tools#atomcam_tools" target="_blank" rel="noopener">

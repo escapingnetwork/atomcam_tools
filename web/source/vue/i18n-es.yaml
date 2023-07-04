@@ -1,0 +1,285 @@
+imageFrame:
+  clickToShrink: hacer clic para reducir
+  clickToExpand: hacer clic para expandir
+
+basicSettings:
+  title: Configuración Básica
+  deviceName:
+    title: Nombre de Pantalla
+    tooltip: Nombre de la Carpeta NAS y Hostname para acceso remoto
+  loginAuthentication:
+    title: Autenticación de Inicio de Sesión
+    tooltip: Requiere Autenticación para Iniciar Sesión
+  account:
+    title: Cuenta
+    tooltip: Establecer nombre de usuario para iniciar sesión
+  password:
+    title: Contraseña
+    tooltip: Establecer contraseña para iniciar sesión
+
+recording:
+  title: Grabación
+  localRecordingSchedule:
+    title: Horario de Grabación Local
+    tooltip: Ventana de Tiempo de Grabación en Tarjeta SD/NAS
+    text:
+      - Horario
+      - Grabación Constante
+
+  SDCard:
+    title: Grabación en Tarjeta SD
+    tooltip: Grabar en un directorio en la Tarjeta SD
+    motionRecording:
+      title: Grabación por Sensor de Movimiento en Tarjeta SD
+      tooltip: Grabar en el directorio "alarm_record" de la Tarjeta SD
+    networkAccess:
+      title: Acceso a la Red
+      tooltip: Transmitir servidor ATOMCam SD-Card CIFS(smb) en la red local
+    savePath:
+      title: Ruta de Guardado
+      tooltip: Describe la Ruta a ser grabada en el formato de especificación strftime. Válido solo para "alarm_record"
+    automaticDeletion:
+      title: Eliminación Automática de Grabaciones
+      tooltip: Eliminar automáticamente las grabaciones de la Tarjeta SD
+    daysToKeep:
+      title: Número de Días a Conservar
+      tooltip: Especificar cuánto tiempo conservar
+    seeAllFiles:
+      title: Ver todos los archivos en la Tarjeta SD
+      tooltip: Mostrar el contenido de la Tarjeta SD
+
+  NAS:
+    title: Grabación en NAS
+    tooltip: Grabar en NAS (Servidor CIFS)
+    motionRecording:
+      title: Grabación por Sensor de Movimiento en NAS
+      tooltip: Grabar en la carpeta "alarm_record" del NAS (Servidor CIFS)
+    networkPath:
+      title: Ruta de la Red
+      tooltip: Ingresar la ruta del Servidor NAS (utilizar formato //servidor/carpeta/)
+    account:
+      title: Cuenta
+      tooltip: Establecer nombre de usuario del NAS
+    password:
+      title: Contraseña
+      tooltip: Establecer contraseña del NAS
+    savePath:
+      title: Ruta de Guardado
+      tooltip: Ingresar la Ruta de almacenamiento después del nombre de la red en formato strftime y con extensión de archivo al final.
+    automaticDeletion:
+      title: Eliminación Automática de Grabaciones
+      tooltip: Eliminar automáticamente las grabaciones del Servidor CIFS
+    daysToKeep:
+      title: Número de Días a Conservar
+      tooltip: Indicar el número de días a conservar
+
+  timelapse:
+    title: Grabación Timelapse
+    tooltip: Grabar timelapses. Se grabará en una ubicación específica en Tarjeta SD/NAS.
+    savePath:
+      title: Ruta de Guardado
+      tooltip: Ingresar la Ruta de grabación en formato strftime y con extensión de archivo al final.
+    note:
+      comment: |
+        Permitir al menos 5 minutos para el procesamiento entre grabaciones timelapse.
+        Si hay superposición de tiempo, se producirán errores y las grabaciones fallarán.
+    start:
+      title: Progreso
+      tooltip: Timelapse en progreso.
+    stop:
+      title: Detener
+      tooltip: Abortar el timelapse.
+      button: Detener
+      comment: 'Proceso abortado: escribiendo archivo actualmente.'
+
+RTSP:
+  title: RTSP
+  main:
+    title: Principal
+    tooltip: Iniciar RTSP Principal (1080p AVC o HEVC)
+    audio:
+      title: Audio
+      tooltip: Activar Audio en RTSP Principal
+    URL:
+      title: URL
+      tooltip: Copiar y pegar esta URL en VLC, etc.
+    format:
+      title: Formato
+      tooltip: Seleccionar formato de transmisión
+      text:
+        - 'HEVC '
+        - 'AVC '
+      comment: ¡Nota! Si lo cambia, Atomcam se reiniciará al enviar.
+  sub:
+    title: Secundario
+    tooltip: Iniciar RTSP Secundario (360 HEVC)
+    audio:
+      title: Audio
+      tooltip: Activar Audio en RTSP Secundario
+    URL:
+      title: URL
+      tooltip: Copiar y pegar esta URL en VLC, etc.
+  http:
+    title: RTSP sobre HTTP
+    tooltip: Utilizar HTTP para la transmisión de RTSP
+
+event:
+  title: Notificación
+  webhook:
+    title: WebHook
+    tooltip: Configurar un Webhook
+    URL:
+      title: URL de Notificación
+      tooltip: Ingresar la URL del Webhook para enviar notificaciones por POST
+    alarm:
+      title: Notificación de Alarma
+      tooltip: Notificar cuando se active una alarma
+      comment: 'tipo: alarmEvent'
+    information:
+      title: Notificación de Información
+      tooltip: Enviar información de reconocimiento cuando se active una alarma
+      comment: 'tipo: recognitionNotify'
+    recordingEnd:
+      title: Notificación de Fin de Grabación
+      tooltip: Notificar cuando finalice la grabación
+      comment: 'tipo: uploadVideoFinish'
+    recordingTransfer:
+      title: Notificación de Transferencia de Grabación
+      tooltip: Enviar un archivo de video cuando se active una alarma
+      comment: 'mime: video/mp4'
+    screenshotEnd:
+      title: Notificación de Fin de Captura de Pantalla
+      tooltip: Notificar con un archivo de imagen fija cuando finalice una alarma
+      comment: 'tipo: uploadPictureFinish'
+    screenshotTransfer:
+      title: Notificación de Transferencia de Captura de Pantalla
+      tooltip: Transmitir un archivo de imagen fija cuando se active una alarma
+      comment: 'mime: image/jpeg'
+    recordingSave:
+      title: Guardado de Grabación Regular
+      tooltip: Notificar sobre grabación regular
+      comment: 'tipo: recordEvent'
+    startTimelapse:
+      title: Iniciar Timelapse
+      tooltip: Notificar sobre inicio de timelapse
+      comment: 'tipo: timelapseStart'
+    recordTimelapse:
+      title: Grabar Timelapse
+      tooltip: Notificar sobre evento de timelapse en curso
+      comment: 'tipo: timelapseEvent'
+    endTimeLapse:
+      title: Fin de Timelapse
+      tooltip: Notificar cuando finalice el evento de timelapse
+      comment: 'tipo: timelapseFinish'
+
+motionDetect:
+  title: Detección de Movimiento
+  sensorPeriod:
+    title: Periodo del Sensor de Movimiento
+    tooltip: Reducir la ventana de alarma nueva de 5 minutos a 30 segundos
+    comment: ¡Nota! Si lo cambia, Atomcam se reiniciará al enviar.
+  uploadStop:
+    title: Detener Subida de Video del Sensor de Movimiento
+    tooltip: Evitar la subida de videos de detección a los servidores de AtomTech. Esto hará que no aparezcan en la aplicación. Si le preocupa enviar cosas a sus servidores, marque esta opción.
+    comment: ¡Nota! Si lo cambia, Atomcam se reiniciará al enviar.
+
+cruise:
+  title: Recorrido
+  cameraMotion:
+    title: Movimiento de la Cámara
+    tooltip: Realizar un recorrido completo.
+  direction:
+    tooltip: Establecer la dirección y velocidad de la cámara. Puede confirmarlo utilizando la ventana JPEG.
+    pan: Pan
+    tilt: Inclinación
+    speed: Velocidad
+  waitAfterMotion:
+    title: Período de espera después del movimiento
+    unit: seg.
+    tooltip: Establecer el período de espera después del movimiento de la cámara.
+  detect:
+    title: Detectar
+    tooltip: Hacer que la cámara permanezca en posición durante más tiempo al detectar movimiento.
+  follow:
+    title: Seguir
+    tooltip: Hacer que la cámara siga el movimiento y extender el tiempo que permanece en posición.
+  waitAfterDetect:
+    title: Espera después de la detección
+    unit: seg.
+    tooltip: Establecer la cantidad de tiempo que se debe esperar en posición después de detectar movimiento.
+  followingSpeed:
+    title: Velocidad
+    tooltip: 'Establecer la velocidad de seguimiento.(1: velocidad baja, 9: velocidad alta)'
+
+monitoring:
+  title: Monitoreo
+  ping:
+    title: Ping
+    tooltip: Habilitar confirmación de estado mediante URL
+  URL:
+    title: URL de Notificación
+    tooltip: Enviar una solicitud HTTP GET a esta URL cada minuto
+
+maintenance:
+  title: Mantenimiento
+  initialPosition:
+    title: Regresar a la Posición Inicial
+    tooltip: Devolver el Swing a la posición original
+    button: Inicio
+  periodicRestart:
+    title: Reinicio Periódico
+    tooltip: Configurar la cámara para reiniciarse según un programa.
+  reboot:
+    title: Reiniciar
+    tooltip: Reiniciar la AtomCam
+    button: Reiniciar
+  eraseSDCard:
+    title: Borrar Tarjeta SD
+    tooltip: Borrar el contenido de video de la tarjeta SD
+    button: Borrar
+  update:
+    title: Actualizar
+    tooltip: Actualizar las herramientas de Atomcam
+  customZip:
+    title: URL de Archivo Personalizado
+    tooltip: utilizar un archivo zip personalizado para actualizar las herramientas de Atomcam
+    URL:
+      title: URL
+      tooltip: la URL del archivo zip personalizado
+
+schedule:
+  allDay: Todo el día
+  startTime: inicio
+  endTime: fin
+  time: tiempo
+  timelapse:
+    startTime: inicio
+    endTime: ' a {endTime}'
+    interval:
+      title: intervalo
+      unit: seg.
+      tooltip: Establecer el intervalo de tiempo entre capturas
+    repeat:
+      title: repetir
+      unit: veces
+      tooltip: Establecer la cantidad de veces que se debe repetir el timelapse
+    days:
+      title: días
+      tooltip: Establecer los días en los que se debe ejecutar el timelapse
+    selectedDays:
+      title: días seleccionados
+      tooltip: Seleccionar los días en los que se debe ejecutar el timelapse
+      all: todos
+      monday: lunes
+      tuesday: martes
+      wednesday: miércoles
+      thursday: jueves
+      friday: viernes
+      saturday: sábado
+      sunday: domingo
+
+footer:
+  save: Guardar
+  cancel: Cancelar
+  refresh: Actualizar
+  back: Volver
